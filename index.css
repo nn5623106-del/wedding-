@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFDF7;
+  color: #2C2416;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[dir='rtl'] body {
+  font-family: 'Amiri', 'Poppins', sans-serif;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FBF7EE;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #E9CE85, #B8860B);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9C6E0C;
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #B8860B;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.glass {
+  background: rgba(255, 253, 247, 0.55);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(201, 162, 39, 0.35);
+}
+
+.glass-strong {
+  background: rgba(255, 253, 247, 0.75);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(201, 162, 39, 0.45);
+}
+
+.gold-border {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#FFFDF7, #FFFDF7) padding-box,
+    linear-gradient(135deg, #F3E1AE, #C9A227 45%, #F0D68C 100%) border-box;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #DEB96A 0%, #B8860B 45%, #F0D68C 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.animated-gradient-bg {
+  background: linear-gradient(120deg, #FFFDF7, #F8EEDA, #F3E5C3, #F5EFE2, #FFFDF7);
+  background-size: 300% 300%;
+  animation: gradientShift 18s ease infinite;
+}
+
+.divider-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C9A227, transparent);
+}
+
+.perspective-1000 {
+  perspective: 1400px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
